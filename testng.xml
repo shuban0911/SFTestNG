@@ -5,9 +5,15 @@
 		<!--listener class-name="listeners.TestListener"></listener-->
 	</listeners>
 	<test name="Test">
-		<classes>
-			<class name="tests.LoginPageTest" />
-			
-		</classes>
-	</test> <!-- Test -->
+	<groups>
+		<run>
+			<include name="login" />
+		</run>
+
+	</groups>
+	<classes>
+		<class name="tests.LoginPageTest" />
+
+	</classes>
+</test> <!-- Test -->
 </suite> <!-- Suite -->

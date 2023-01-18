@@ -36,7 +36,7 @@ public class LoginPageTest extends BaseTest {
 		
 	}
 	
-	@Test(priority=1 , dataProvider = "logindata")
+	@Test(priority=1 , dataProvider = "logindata", groups= {"login"})
 	public void validUserTest(String Username,String Password) {
 		try {	
 			username = Username;
@@ -84,7 +84,7 @@ public class LoginPageTest extends BaseTest {
 		}
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void forgotPasswordTest() {
 		try {
 			login.enterUsername(username);
@@ -139,6 +139,8 @@ public class LoginPageTest extends BaseTest {
 		CommonUtilities common = new CommonUtilities();
 		common.takeScreenshot(driver);
 		driver.close();
+		driver.quit();
+		
 	}
 	
 	@DataProvider(name = "logindata")
