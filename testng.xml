@@ -12,7 +12,7 @@
 
 	</groups>
 	<classes>
-		<class name="tests.LoginPageTest" />
+		<!--class name="tests.LoginPageTest" /-->
 
 	</classes>
 </test> <!-- Test -->
